@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">QuickCook</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="quick">Quick</string>
+    <string name="cook">Cook</string>
+    <string name="remember_password">Remember Password?</string>
+    <string name="login">Login</string>
+    <string name="google">Google</string>
+    <string name="or_login_google">Or Login With</string>
+    <string name="or_sign_up_google">Or Sign Up With</string>
+    <string name="agree_private_policy">I agree with Private Policy</string>
+    <string name="dish">Dishes</string>
+    <string name="plan">Plan Meal</string>
+    <string name="favorites">Favorites</string>
+    <string name="hint_search_ingredient">Search your favorites ingredient</string>
+    <string name="hint_search_dish">Search your favorites dish</string>
+    <string name="heading_ingredient_frag"><![CDATA[Choose <br /> your <br /> ingredients!]]></string>
+    <!--    <string name="title_ingredient_frag"><![CDATA[& make your tasty dish…]]></string>-->
+    <string name="ready_cook">Ready to cook</string>
+    <string name="see_all">See All</string>
+    <string name="title_type_fragment">By Type</string>
+    <string name="title_ingredient_fragment">By Ingredient</string>
+</resources>

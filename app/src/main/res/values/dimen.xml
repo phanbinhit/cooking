@@ -12,4 +12,6 @@
     <dimen name="size_text_large">24dp</dimen>
     <dimen name="width_img_ingredient">64dp</dimen>
     <dimen name="height_img_ingredient">64dp</dimen>
+    <dimen name="min_width">48dp</dimen>
+    <dimen name="min_max_width">100dp</dimen>
 </resources>

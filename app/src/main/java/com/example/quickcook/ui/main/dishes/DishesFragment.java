@@ -58,7 +58,7 @@ public class DishesFragment extends BaseFragment {
     protected void initView() {
         mFragments = Arrays.asList(TypeFragment.newInstance(getString(R.string.title_type_fragment)),
                 IngredientFragment.newInstance(getString(R.string.title_ingredient_fragment)));
-        mFragmentAdapter = new DishesFragmentAdapter(getActivity().getSupportFragmentManager(), mFragments);
+        mFragmentAdapter = new DishesFragmentAdapter(getChildFragmentManager(), mFragments);
         binding.viewPagerDish.setAdapter(mFragmentAdapter);
         binding.tabLayoutDish.setupWithViewPager(binding.viewPagerDish);
     }

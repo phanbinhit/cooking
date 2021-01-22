@@ -3,6 +3,7 @@ package com.example.quickcook.data.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -122,13 +123,19 @@ public class Recipe {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Recipe() {
     }
 
+    public Recipe(Integer id, String title, String image, String imageType) {
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.imageType = imageType;
+    }
+
     /**
-     *  @param vegetarian
+     * @param vegetarian
      * @param vegan
      * @param glutenFree
      * @param dairyFree

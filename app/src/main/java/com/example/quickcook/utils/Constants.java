@@ -9,7 +9,8 @@ public class Constants {
 
     //constants api
     public static final int TIME_OUT = 30;
-    public static final String API_KEY = "4f990e508dba4c5eb29f0656c582aa07";
-    public static final String BASE_URL = "https://spoonacular.com/";
+    public static final String API_KEY = "824be1f03abb437fb498b01b07d7f098";
+    public static final String BASE_URL = "https://api.spoonacular.com/";
+    public static final String INGREDIENT_IMAGE_URL = "https://spoonacular.com/cdn/ingredients_100x100/%s";
 
 }

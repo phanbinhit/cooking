@@ -1,15 +1,14 @@
 package com.example.quickcook.ui.main.dishes.ingredient;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.quickcook.data.model.Ingredient;
 import com.example.quickcook.databinding.IngredientFragBinding;
@@ -22,6 +21,8 @@ public class IngredientFragment extends BaseFragment {
 
     private IngredientFragBinding binding;
     private IngredientViewModel mViewModel;
+    private List<Ingredient> mIngredients;
+    private IngredientAdapter mAdapter;
 
     public static IngredientFragment newInstance(String title) {
         IngredientFragment fragment = new IngredientFragment();
@@ -43,26 +44,25 @@ public class IngredientFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        initView();
-        initListener();
+        //initView();
+        //initListener();
     }
 
     @Override
     protected void initView() {
         mViewModel = new ViewModelProvider(this).get(IngredientViewModel.class);
-        mViewModel.setIngredientLiveData("vegetable");
-        mViewModel.ingredientLiveData.observe(this, new Observer<List<Ingredient>>() {
-            @Override
-            public void onChanged(List<Ingredient> ingredients) {
-                for (Ingredient ingredient : ingredients) {
-                    Log.d("INGREDIENT", ingredient.getImage());
-                }
-            }
-        });
+        mViewModel.setIngredientLiveData("drink");
+
+        mAdapter = new IngredientAdapter(getActivity());
+        binding.recyclerViewIngredient.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        binding.recyclerViewIngredient.setAdapter(mAdapter);
     }
 
     @Override
     protected void initListener() {
-
+        mViewModel.ingredientLiveData.observe(getViewLifecycleOwner(), ingredients -> {
+            mIngredients = ingredients;
+            mAdapter.setIngredients(mIngredients);
+        });
     }
 }

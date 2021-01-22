@@ -79,4 +79,13 @@ public class Ingredient {
         this.image = image;
     }
 
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", localizedName='" + localizedName + '\'' +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }

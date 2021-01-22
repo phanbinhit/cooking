@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_item_recipe"
+    android:layout_marginVertical="@dimen/dimen_8"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="@dimen/dimen_4"
@@ -11,6 +13,7 @@
         android:layout_width="@dimen/width_img_ingredient"
         android:layout_height="@dimen/height_img_ingredient"
         android:src="@drawable/bg_cinnamon"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,6 +52,7 @@
                 android:id="@+id/tvNutrition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/size_text_small" />
 
@@ -62,6 +66,7 @@
             <TextView
                 android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_text"
                 android:textSize="@dimen/size_text_small" />
@@ -73,7 +78,6 @@
         android:id="@+id/llFavorites"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginEnd="@dimen/dimen_24"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -84,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_favorite_border_32" />
+            android:src="@drawable/ic_baseline_favorite_border" />
 
         <Button
             android:id="@+id/btnSeeAll"
@@ -92,7 +96,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/bg_gradient"
-            android:minHeight="@dimen/dimen_32"
+            android:minHeight="@dimen/dimen_24"
+            android:minWidth="@dimen/min_width"
             android:text="@string/see_all"
             android:textAllCaps="false"
             android:textColor="@color/white"
